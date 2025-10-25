@@ -46,25 +46,6 @@ header p {
     color: var(--cor-branco);
 }
 
-.navbar {
-    background-color: var(--cor-branco);
-    padding: 15px 20px;
-    box-shadow: var(--sombra-card);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar a.home-link {
-    color: var(--cor-principal);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
 .main-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -78,22 +59,7 @@ header p {
     margin-bottom: 30px;
 }
 
-.page-header {
-    background-color: var(--cor-principal);
-    color: var(--cor-branco);
-    text-align: center;
-    padding: 40px 20px;
-}
-.page-header h1 {
-    color: var(--cor-branco);
-    font-size: 2.5rem;
-}
-.page-header p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-    margin-top: 5px;
-}
-
+/* Estilos da Página Inicial (Menu de Regiões) */
 .region-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -123,25 +89,8 @@ header p {
 .region-card.placeholder .region-info h3,
 .region-card.placeholder .region-info p { text-shadow: none; }
 
-/* === LAYOUT DE CATÁLOGO (IMAGEM CLICÁVEL) === */
-.tour-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-.tour-catalog-card {
-    display: block;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--sombra-card);
-    transition: all 0.3s ease;
-}
-.tour-catalog-card:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
-.tour-catalog-card img { width: 100%; display: block; }
-/* === FIM DO LAYOUT DE CATÁLOGO === */
-
-/* Estilos para a página "Sobre Nós" */
-.about-page { max-width: 800px; }
+/* Estilos da Página Sobre Nós */
+.about-page { max-width: 800px; margin: 0 auto; }
 .about-images { display: flex; gap: 30px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
 .team-member { text-align: center; }
 .team-member img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid var(--cor-acento); box-shadow: var(--sombra-card); }
@@ -164,7 +113,7 @@ footer {
 .footer-container { max-width: 800px; margin: 0 auto; }
 .footer-links { margin-bottom: 20px; }
 .footer-links a { 
-    color: var(--cor-branco); /* CORRIGIDO: Garante que os links aparecem brancos no rodapé */
+    color: var(--cor-branco); /* GARANTIA DE COR BRANCA NO LINK DO RODAPÉ */
     text-decoration: none; 
     margin: 0 10px; 
     transition: color 0.3s ease; 
@@ -175,7 +124,6 @@ footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margi
 footer p { margin-bottom: 0; }
 
 
-/* Regras de Responsividade */
 @media (max-width: 768px) {
     header { padding: 60px 15px; }
     header h1 { font-size: 2.5rem; }
