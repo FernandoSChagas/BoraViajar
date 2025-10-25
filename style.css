@@ -19,17 +19,24 @@ body {
     line-height: 1.7;
 }
 
+/* === ALTERAÇÃO AQUI: NOVO HEADER COM IMAGEM DE FUNDO === */
 header {
-    background-color: var(--cor-principal);
+    background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-boraviajar.png') no-repeat center center;
+    background-size: cover;
     color: var(--cor-branco);
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px; /* Mais padding para a imagem respirar */
+    position: relative; /* Necessário para o z-index do texto */
 }
 
 header h1 {
     margin: 0;
     font-size: 3rem;
     font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Sombra para o texto se destacar */
+    color: var(--cor-branco); /* Garante que o texto é branco */
+    position: relative;
+    z-index: 2; /* Para o texto ficar acima do gradiente */
 }
 
 header p {
@@ -39,7 +46,13 @@ header p {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Sombra para o texto se destacar */
+    color: var(--cor-branco); /* Garante que o texto é branco */
+    position: relative;
+    z-index: 2; /* Para o texto ficar acima do gradiente */
 }
+/* === FIM DA ALTERAÇÃO === */
+
 
 .navbar {
     background-color: var(--cor-branco);
@@ -141,7 +154,6 @@ header p {
     text-shadow: none;
 }
 
-/* === NOVO LAYOUT PARA O CATÁLOGO DE TOURS === */
 .tour-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -160,9 +172,8 @@ header p {
 }
 .tour-catalog-card img {
     width: 100%;
-    display: block; /* Remove espaço extra abaixo da imagem */
+    display: block;
 }
-/* === FIM DO NOVO LAYOUT === */
 
 
 footer {
@@ -181,10 +192,10 @@ footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margi
 
 /* Regras de Responsividade */
 @media (max-width: 768px) {
-    header { padding: 50px 15px; }
+    header { padding: 60px 15px; }
     header h1 { font-size: 2.5rem; }
     .main-container { margin-top: 25px; padding: 0 15px; }
     .region-card { height: 200px; }
     .region-card h3 { font-size: 2rem; }
-    .tour-grid { grid-template-columns: 1fr; } /* Uma coluna em telemóveis */
+    .tour-grid { grid-template-columns: 1fr; }
 }
