@@ -123,7 +123,7 @@ header p {
 .region-card.placeholder .region-info h3,
 .region-card.placeholder .region-info p { text-shadow: none; }
 
-/* === LAYOUT DE CATÁLOGO === */
+/* === LAYOUT DE CATÁLOGO (IMAGEM CLICÁVEL) === */
 .tour-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -140,7 +140,7 @@ header p {
 .tour-catalog-card img { width: 100%; display: block; }
 /* === FIM DO LAYOUT DE CATÁLOGO === */
 
-/* === ESTILOS PARA PÁGINA "SOBRE NÓS" === */
+/* Estilos para a página "Sobre Nós" */
 .about-page { max-width: 800px; }
 .about-images { display: flex; gap: 30px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
 .team-member { text-align: center; }
@@ -150,7 +150,6 @@ header p {
 .about-text p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px; text-align: justify; }
 .affiliate-disclosure { background-color: #f0f9ff; padding: 20px; margin-top: 40px; border-radius: 8px; border-left: 5px solid var(--cor-acento); }
 .affiliate-disclosure h3 { margin: 0 0 10px 0; }
-/* === FIM DOS ESTILOS PARA PÁGINA "SOBRE NÓS" === */
 
 
 footer {
