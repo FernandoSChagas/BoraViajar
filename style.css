@@ -59,36 +59,6 @@ header p {
     margin-bottom: 30px;
 }
 
-/* Estilos da Página Inicial (Menu de Regiões) */
-.region-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-}
-
-.region-card {
-    height: 250px;
-    border-radius: 12px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: var(--cor-branco);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.region-card:hover { transform: scale(1.03); }
-.region-card .region-info { text-align: center; z-index: 2; }
-.region-card h3 { font-size: 2.2rem; font-weight: 700; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
-.region-card p { font-size: 1.1rem; margin: 5px 0 0 0; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
-.region-card.placeholder { background: #e2e8f0; color: var(--cor-secundaria); }
-.region-card.placeholder .region-info h3,
-.region-card.placeholder .region-info p { text-shadow: none; }
-
 /* Estilos da Página Sobre Nós */
 .about-page { max-width: 800px; margin: 0 auto; }
 .about-images { display: flex; gap: 30px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
@@ -99,6 +69,23 @@ header p {
 .about-text p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px; text-align: justify; }
 .affiliate-disclosure { background-color: #f0f9ff; padding: 20px; margin-top: 40px; border-radius: 8px; border-left: 5px solid var(--cor-acento); }
 .affiliate-disclosure h3 { margin: 0 0 10px 0; }
+
+/* === LAYOUT FINAL DO CATÁLOGO DE TOURS (IMAGEM CLICÁVEL) === */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+.tour-catalog-card {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: all 0.3s ease;
+}
+.tour-catalog-card:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+.tour-catalog-card img { width: 100%; display: block; }
+/* === FIM DO LAYOUT DE CATÁLOGO === */
 
 
 footer {
@@ -113,7 +100,7 @@ footer {
 .footer-container { max-width: 800px; margin: 0 auto; }
 .footer-links { margin-bottom: 20px; }
 .footer-links a { 
-    color: var(--cor-branco); /* GARANTIA DE COR BRANCA NO LINK DO RODAPÉ */
+    color: var(--cor-branco);
     text-decoration: none; 
     margin: 0 10px; 
     transition: color 0.3s ease; 
@@ -128,7 +115,5 @@ footer p { margin-bottom: 0; }
     header { padding: 60px 15px; }
     header h1 { font-size: 2.5rem; }
     .main-container { margin-top: 25px; padding: 0 15px; }
-    .region-card { height: 200px; }
-    .region-card h3 { font-size: 2rem; }
     .tour-grid { grid-template-columns: 1fr; }
 }
