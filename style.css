@@ -33,8 +33,6 @@ header h1 {
     font-weight: 700;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     color: var(--cor-branco);
-    position: relative;
-    z-index: 2;
 }
 
 header p {
@@ -46,8 +44,6 @@ header p {
     margin-right: auto;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     color: var(--cor-branco);
-    position: relative;
-    z-index: 2;
 }
 
 .navbar {
@@ -143,11 +139,11 @@ header p {
     text-shadow: none;
 }
 
-/* === NOVO LAYOUT CORRIGIDO PARA O CATÁLOGO DE TOURS === */
+/* === LAYOUT CORRIGIDO PARA O CATÁLOGO DE TOURS === */
 .tour-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px; /* Mais espaço entre os itens */
+    gap: 40px; /* Espaço entre os itens completos (imagem + texto) */
 }
 
 .tour-item {
@@ -160,7 +156,7 @@ header p {
     overflow: hidden;
     box-shadow: var(--sombra-card);
     transition: all 0.3s ease;
-    margin-bottom: 15px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 15px; /* Espaço entre a imagem e o texto abaixo */
 }
 
 .tour-catalog-card:hover {
@@ -170,7 +166,7 @@ header p {
 
 .tour-catalog-card img {
     width: 100%;
-    display: block;
+    display: block; /* Remove espaço extra abaixo da imagem */
 }
 
 .tour-description h3 {
@@ -185,7 +181,7 @@ header p {
     margin: 0;
     line-height: 1.6;
 }
-/* === FIM DO NOVO LAYOUT === */
+/* === FIM DO LAYOUT CORRIGIDO === */
 
 
 footer {
