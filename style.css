@@ -50,51 +50,140 @@ header p {
     z-index: 2;
 }
 
+.navbar {
+    background-color: var(--cor-branco);
+    padding: 15px 20px;
+    box-shadow: var(--sombra-card);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a.home-link {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 .main-container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* === NOVO ESTILO PARA OS TÍTULOS DAS SECÇÕES === */
-.title-wrapper {
+.page-header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
     text-align: center;
-    margin-bottom: 30px;
+    padding: 40px 20px;
 }
-h2.section-title {
+.page-header h1 {
+    color: var(--cor-branco);
+    font-size: 2.5rem;
+}
+.page-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.region-card {
+    height: 250px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-branco);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.region-card:hover {
+    transform: scale(1.03);
+}
+
+.region-card .region-info {
+    text-align: center;
+    z-index: 2;
+}
+
+.region-card h3 {
     font-size: 2.2rem;
-    color: var(--cor-principal);
-    display: inline-block;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--cor-acento);
-    margin-top: 40px; /* Espaço entre as secções de cidades */
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-/* === FIM DO NOVO ESTILO === */
 
+.region-card p {
+    font-size: 1.1rem;
+    margin: 5px 0 0 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
 
+.region-card.placeholder {
+    background: #e2e8f0;
+    color: var(--cor-secundaria);
+}
+.region-card.placeholder .region-info h3,
+.region-card.placeholder .region-info p {
+    text-shadow: none;
+}
+
+/* === NOVO LAYOUT PARA O CATÁLOGO DE TOURS COM TEXTO === */
 .tour-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
-
 .tour-catalog-card {
     display: block;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--sombra-card);
     transition: all 0.3s ease;
+    background-color: var(--cor-branco);
+    text-decoration: none;
 }
-
 .tour-catalog-card:hover {
     transform: scale(1.03);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
-
 .tour-catalog-card img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
     display: block;
 }
+.tour-catalog-card .tour-info {
+    padding: 20px;
+}
+.tour-catalog-card h3 {
+    color: var(--cor-principal);
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+}
+.tour-catalog-card p {
+    color: var(--cor-secundaria);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+/* === FIM DO NOVO LAYOUT === */
+
 
 footer {
     text-align: center;
@@ -115,6 +204,7 @@ footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margi
     header { padding: 60px 15px; }
     header h1 { font-size: 2.5rem; }
     .main-container { margin-top: 25px; padding: 0 15px; }
-    h2.section-title { font-size: 1.8rem; }
+    .region-card { height: 200px; }
+    .region-card h3 { font-size: 2rem; }
     .tour-grid { grid-template-columns: 1fr; }
 }
