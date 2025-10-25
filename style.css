@@ -1,7 +1,7 @@
 :root {
     --cor-principal: #2d3748;
     --cor-secundaria: #4a5568;
-    --cor-acento: #38b2ac;
+    --cor-acento: #38b2ac; /* Cor unificada verde-azulado */
     --cor-fundo: #f9fafb;
     --cor-branco: #ffffff;
     --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -32,6 +32,7 @@ header h1 {
     font-size: 3rem;
     font-weight: 700;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    color: var(--cor-branco);
 }
 
 header p {
@@ -42,6 +43,7 @@ header p {
     margin-left: auto;
     margin-right: auto;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    color: var(--cor-branco);
 }
 
 .navbar {
@@ -121,6 +123,7 @@ header p {
 .region-card.placeholder .region-info h3,
 .region-card.placeholder .region-info p { text-shadow: none; }
 
+/* === LAYOUT DE CATÁLOGO === */
 .tour-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -135,9 +138,10 @@ header p {
 }
 .tour-catalog-card:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 .tour-catalog-card img { width: 100%; display: block; }
+/* === FIM DO LAYOUT DE CATÁLOGO === */
 
 
-/* === NOVOS ESTILOS PARA A PÁGINA "SOBRE NÓS" === */
+/* === ESTILOS PARA PÁGINA "SOBRE NÓS" === */
 .about-page { max-width: 800px; /* Mais estreito para melhor leitura */ }
 .about-images { display: flex; gap: 30px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
 .team-member { text-align: center; }
@@ -147,7 +151,6 @@ header p {
 .about-text p { font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px; text-align: justify; }
 .affiliate-disclosure { background-color: #f0f9ff; padding: 20px; margin-top: 40px; border-radius: 8px; border-left: 5px solid var(--cor-acento); }
 .affiliate-disclosure h3 { margin: 0 0 10px 0; }
-/* === FIM DOS NOVOS ESTILOS === */
 
 
 footer {
@@ -158,6 +161,7 @@ footer {
     color: rgba(255, 255, 255, 0.8);
     border-top: 4px solid var(--cor-acento);
 }
+
 .footer-container { max-width: 800px; margin: 0 auto; }
 .footer-links { margin-bottom: 20px; }
 .footer-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; margin: 0 10px; transition: color 0.3s ease; }
@@ -166,6 +170,7 @@ footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margi
 .footer-description { font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; }
 .footer-copyright { margin-top: 30px; font-size: 0.85rem; opacity: 0.7; }
 
+/* Regras de Responsividade */
 @media (max-width: 768px) {
     header { padding: 60px 15px; }
     header h1 { font-size: 2.5rem; }
