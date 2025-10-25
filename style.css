@@ -41,6 +41,25 @@ header p {
     margin-right: auto;
 }
 
+.navbar {
+    background-color: var(--cor-branco);
+    padding: 15px 20px;
+    box-shadow: var(--sombra-card);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a.home-link {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 .main-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -52,6 +71,22 @@ header p {
     color: var(--cor-principal);
     text-align: center;
     margin-bottom: 30px;
+}
+
+.page-header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 40px 20px;
+}
+.page-header h1 {
+    color: var(--cor-branco);
+    font-size: 2.5rem;
+}
+.page-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-top: 5px;
 }
 
 .region-grid {
@@ -106,6 +141,29 @@ header p {
     text-shadow: none;
 }
 
+/* === NOVO LAYOUT PARA O CATÁLOGO DE TOURS === */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+.tour-catalog-card {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: all 0.3s ease;
+}
+.tour-catalog-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.tour-catalog-card img {
+    width: 100%;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+/* === FIM DO NOVO LAYOUT === */
+
 
 footer {
     text-align: center;
@@ -116,46 +174,17 @@ footer {
     border-top: 4px solid var(--cor-acento);
 }
 
-.footer-container { 
-    max-width: 800px; 
-    margin: 0 auto; 
-}
-
-footer h3 { 
-    font-size: 1.5rem; 
-    font-weight: 600; 
-    color: var(--cor-branco); 
-    margin: 0 0 10px 0; 
-}
-
-.footer-description { 
-    font-size: 0.95rem; 
-    margin-bottom: 25px; 
-    line-height: 1.6; 
-}
-
-.footer-copyright { 
-    margin-top: 30px; 
-    font-size: 0.85rem; 
-    opacity: 0.7; 
-}
+.footer-container { max-width: 800px; margin: 0 auto; }
+footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margin: 0 0 10px 0; }
+.footer-description { font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; }
+.footer-copyright { margin-top: 30px; font-size: 0.85rem; opacity: 0.7; }
 
 /* Regras de Responsividade */
 @media (max-width: 768px) {
-    header { 
-        padding: 50px 15px; 
-    }
-    header h1 { 
-        font-size: 2.5rem; 
-    }
-    .main-container { 
-        margin-top: 25px; 
-        padding: 0 15px; 
-    }
-    .region-card {
-        height: 200px;
-    }
-    .region-card h3 {
-        font-size: 2rem;
-    }
+    header { padding: 50px 15px; }
+    header h1 { font-size: 2.5rem; }
+    .main-container { margin-top: 25px; padding: 0 15px; }
+    .region-card { height: 200px; }
+    .region-card h3 { font-size: 2rem; }
+    .tour-grid { grid-template-columns: 1fr; } /* Uma coluna em telemóveis */
 }
