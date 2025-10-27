@@ -140,7 +140,7 @@ header p {
 
 .tour-catalog-card img { 
     width: 100%; 
-    height: auto; /* REGRESSOU AO ORIGINAL */
+    height: auto; 
     display: block; 
 }
 /* FIM DA CORREÇÃO */
