@@ -1,7 +1,7 @@
 :root {
     --cor-principal: #2d3748;
     --cor-secundaria: #4a5568;
-    --cor-acento: #38b2ac; /* Verde-azulado */
+    --cor-acento: #38b2ac;
     --cor-fundo: #f9fafb;
     --cor-branco: #ffffff;
     --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -123,31 +123,24 @@ header p {
 .region-card.placeholder .region-info h3,
 .region-card.placeholder .region-info p { text-shadow: none; }
 
-/* === LAYOUT CORRIGIDO PARA O CATÁLOGO DE TOURS (CORREÇÃO DE ALTURA) === */
+/* === LAYOUT CORRIGIDO PARA O CATÁLOGO DE TOURS (VERSÃO ORIGINAL) === */
 .tour-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas mais estreitas para caber mais */
     gap: 30px;
 }
 .tour-catalog-card {
     display: block;
     border-radius: 12px;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: var(--sombra-card);
     transition: all 0.3s ease;
-    
-    /* ***** CORREÇÃO DE ALTURA CRUCIAL ***** */
-    height: 450px; /* Alinhe esta altura com a altura visual dos seus cards de Porto/Lisboa */
-    position: relative; 
-    /* ***** FIM DA CORREÇÃO ***** */
 }
 .tour-catalog-card:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 
 .tour-catalog-card img { 
     width: 100%; 
-    /* Força a imagem a preencher 100% da altura e a ser cortada se necessário */
-    height: 100%; 
-    object-fit: cover;
+    height: auto; /* REGRESSOU AO ORIGINAL */
     display: block; 
 }
 /* FIM DA CORREÇÃO */
